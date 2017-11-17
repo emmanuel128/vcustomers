@@ -1,6 +1,7 @@
 # vCustomers
 
-> Simple customer manager frontend to be used with the [SlimPHP RESTful API](https://github.com/bradtraversy/slimapp)
+> Simple customer manager frontend developed with Vue.js using Pug (jade), to be used with a [.Net Web API]().
+> Reference: [Brad Traversy] (https://github.com/bradtraversy/vcustomers)
 
 ## Installation
 
