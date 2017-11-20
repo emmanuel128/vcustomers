@@ -4,14 +4,14 @@
         router-link(to="/") Back
         h1.page-header {{customer.FirstName}} {{customer.LastName}}
             span.pull-right
-                router-link.btn.btn-primary(v-bind:to="'/edit/+customer.CustomerID'") Edit
+                router-link.btn.btn-primary(v-bind:to="'/edit/' + customer.CustomerID") Edit
                 button.btn.btn-danger(v-on:click="deleteCustomer(customer.CustomerID)") Delete
             
         ul.list-group
             li.list-group-item
-                span.glyphicon.glyphicon-phone(aria-hidden="true") {{customer.Phone}}
+                span.glyphicon.glyphicon-phone(aria-hidden="true") &nbsp{{customer.Phone}}
             li.list-group-item
-                span.glyphicon.glyphicon-envelope(aria-hidden="true") {{customer.Email}}
+                span.glyphicon.glyphicon-envelope(aria-hidden="true") &nbsp{{customer.Email}}
 
         ul.list-group
             li.list-group-item {{customer.Address}}
