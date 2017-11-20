@@ -21,7 +21,7 @@
           input.form-control(type='text', maxlength='50', placeholder='Email', v-model='customer.Email', required='')
         .form-group
           label Phone
-          input.form-control(type='text', maxlength='8', placeholder='Phone', v-model='customer.Phone', required='')
+          input.form-control(type='text', maxlength='10', placeholder='Phone', v-model='customer.Phone', required='')
       .well
         h4 Customer Location
         .form-group

@@ -25,7 +25,7 @@
 
                 .form-group
                     label Phone
-                    input(type="phone", maxlength="8", placeholder="Phone", v-model="customer.Phone", required).form-control
+                    input(type="phone", maxlength="10", placeholder="Phone", v-model="customer.Phone", required).form-control
                 
             .well
                 h4 Customer Location
