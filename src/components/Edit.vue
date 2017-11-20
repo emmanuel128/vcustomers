@@ -45,7 +45,7 @@
                     label Zip Code
                     input(type="number", maxlength="5", placeholder="Zip Code", v-model="customer.ZipCode", required).form-control
                 
-        button(type="submit").btn.btn-primary Submit
+            button(type="submit").btn.btn-primary Submit
 </template>
 
 <script>
@@ -88,9 +88,10 @@
                         "Content-Type": "application/json"
                     }
                 })
-                    .then(function(response){
-                        this.$router.push({path: '/', query: {alert: 'Customer Updated'}});
-                    });
+                .then(function(response){
+                    console.log(response);
+                    this.$router.push({path: '/', query: {alert: 'Customer Updated'}});
+                });
 
                 e.preventDefault();
             }
