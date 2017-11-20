@@ -1,24 +1,22 @@
-<template>
-  <div class="details container">
-      <br>
-    <router-link to="/">Back</router-link>
-    <h1 class="page-header">{{customer.FirstName}} {{customer.LastName}}
-        <span class="pull-right">
-            <router-link class="btn btn-primary" v-bind:to="'/edit/'+customer.CustomerID">Edit</router-link>
-            <button class="btn btn-danger" v-on:click="deleteCustomer(customer.CustomerID)">Delete</button>
-        </span>
-    </h1>
-    <ul class="list-group">
-        <li class="list-group-item"><span class="glyphicon glyphicon-Phone" aria-hidden="true"></span> {{customer.Phone}}</li>
-        <li class="list-group-item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> {{customer.Email}}</li>
-    </ul>
+<template lang="pug">
+    .details.container
+        br
+        router-link(to="/") Back
+        h1.page-header {{customer.FirstName}} {{customer.LastName}}
+            span.pull-right
+                router-link.btn.btn-primary(v-bind:to="'/edit/+customer.CustomerID'") Edit
+                button.btn.btn-danger(v-on:click="deleteCustomer(customer.CustomerID)") Delete
+            
+        ul.list-group
+            li.list-group-item
+                span.glyphicon.glyphicon-phone(aria-hidden="true") {{customer.Phone}}
+            li.list-group-item
+                span.glyphicon.glyphicon-envelope(aria-hidden="true") {{customer.Email}}
 
-    <ul class="list-group">
-        <li class="list-group-item">{{customer.Address}}</li>
-        <li class="list-group-item">{{customer.City}}</li>
-        <li class="list-group-item">{{customer.State}}</li>
-    </ul>
-  </div>
+        ul.list-group
+            li.list-group-item {{customer.Address}}
+            li.list-group-item {{customer.City}}
+            li.list-group-item {{customer.State}}
 </template>
 
 <script>

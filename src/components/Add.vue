@@ -1,57 +1,42 @@
-<template>
-  <div class="add container">
-    <Alert v-if="alert" v-bind:message="alert" />
-    <h1 class="page-header">Add Customer</h1>
-    <form v-on:submit="addCustomer">
-        <div class="well">
-            <h4>Customer Info</h4>
-            <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control" maxlength="20" placeholder="First Name" v-model="customer.FirstName" required>
-            </div>
-            <div class="form-group">
-                <label>Initial</label>
-                <input type="text" class="form-control" maxlength="1" placeholder="Initial (optional)" v-model="customer.Initial">
-            </div> 
-            <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control" maxlength="50" placeholder="Last Name" v-model="customer.LastName" required>
-            </div>
-        </div>
-        <div class="well">
-            <h4>Customer Contact</h4>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="text" class="form-control" maxlength="50" placeholder="Email" v-model="customer.Email" required>
-            </div>
-            <div class="form-group">
-                <label>Phone</label>
-                <input type="text" class="form-control" maxlength="8" placeholder="Phone" v-model="customer.Phone" required>
-            </div>
-        </div>
-
-        <div class="well">
-            <h4>Customer Location</h4>
-            <div class="form-group">
-                <label>Address</label>
-                <input type="text" class="form-control" maxlength="50" placeholder="Address" v-model="customer.Address" required>
-            </div>
-            <div class="form-group">
-                <label>City</label>
-                <input type="text" class="form-control" maxlength="20" placeholder="City" v-model="customer.City" required>
-            </div>
-            <div class="form-group">
-                <label>State</label>
-                <input type="text" class="form-control" maxlength="2" placeholder="State" v-model="customer.State" required>
-            </div>
-            <div class="form-group">
-                <label>Zip Code</label>
-                <input type="text" class="form-control" maxlength="5" placeholder="Zip Code" v-model="customer.ZipCode" required>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
+<template lang="pug">
+  .add.container
+    alert(v-if='alert', v-bind:message='alert')
+    h1.page-header Add Customer
+    form(v-on:submit='addCustomer')
+      .well
+        h4 Customer Info
+        .form-group
+          label First Name
+          input.form-control(type='text', maxlength='20', placeholder='First Name', v-model='customer.FirstName', required='')
+        .form-group
+          label Initial
+          input.form-control(type='text', maxlength='1', placeholder='Initial (optional)', v-model='customer.Initial')
+        .form-group
+          label Last Name
+          input.form-control(type='text', maxlength='50', placeholder='Last Name', v-model='customer.LastName', required='')
+      .well
+        h4 Customer Contact
+        .form-group
+          label Email
+          input.form-control(type='text', maxlength='50', placeholder='Email', v-model='customer.Email', required='')
+        .form-group
+          label Phone
+          input.form-control(type='text', maxlength='8', placeholder='Phone', v-model='customer.Phone', required='')
+      .well
+        h4 Customer Location
+        .form-group
+          label Address
+          input.form-control(type='text', maxlength='50', placeholder='Address', v-model='customer.Address', required='')
+        .form-group
+          label City
+          input.form-control(type='text', maxlength='20', placeholder='City', v-model='customer.City', required='')
+        .form-group
+          label State
+          input.form-control(type='text', maxlength='2', placeholder='State', v-model='customer.State', required='')
+        .form-group
+          label Zip Code
+          input.form-control(type='text', maxlength='5', placeholder='Zip Code', v-model='customer.ZipCode', required='')
+      button.btn.btn-primary(type='submit') Submit
 </template>
 
 <script>
